@@ -28,7 +28,7 @@ form.addEventListener('submit', async (e) => {
     const requestData = {
         topic,
         duration,
-        key_points: keyPoints.length > 0 ? keyPoints : null,
+        key_points: keyPoints.length > 0 ? keyPoints : [],
         style: 'educational'
     };
     

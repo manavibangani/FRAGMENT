@@ -160,7 +160,7 @@ def create_intro_clip(
         # Create text clip
         text_clip = TextClip(
             text=topic,
-            font_size=50,
+            font_size=35,
             color='white',
             font=str(font_path),
             stroke_color='black',
@@ -179,7 +179,7 @@ def create_intro_clip(
         # Create a simple color clip as fallback
         from moviepy import ColorClip
         fallback_clip = ColorClip(size=(1920, 1080), color=(0, 0, 0), duration=duration)
-        text_clip = TextClip(text=topic, font_size=30, color='white').with_position('center').with_duration(duration)
+        text_clip = TextClip(text=topic, font_size=30, color='white', font=str(font_path)).with_position('center').with_duration(duration)
         return CompositeVideoClip([fallback_clip, text_clip])
 
 
@@ -336,7 +336,8 @@ def create_video(
                         font=str(font_path),
                         color='white',
                         bg_color='black',
-                        size=(1000, 100),
+                        size=(1280, 150),
+                        font_size=28,
                         method='caption',
                         text_align="center",
                         horizontal_align="center"
@@ -349,7 +350,8 @@ def create_video(
                     font=str(font_path),
                     color='white',
                     bg_color='black',
-                    size=(1000, 100),
+                    size=(1280, 150),
+                    font_size=28,
                     method='caption',
                     text_align="center",
                     horizontal_align="center"

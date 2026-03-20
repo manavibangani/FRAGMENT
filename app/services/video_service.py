@@ -150,7 +150,7 @@ class VideoGenerationService:
                 font_path=settings.FONT_PATH,
                 output_file=temp_video_path,
                 intro_image_path=settings.INTRO_IMAGE_PATH,
-                with_subtitles=False,
+                with_subtitles=True,
                 fps=settings.DEFAULT_VIDEO_FPS
             )
             
